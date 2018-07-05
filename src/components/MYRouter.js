@@ -6,6 +6,7 @@ import { BrowserRouter as
 } from 'react-router-dom';
 
 import Home from './Home';
+import Post from './Post';
 
 class MYRouter extends Component {
     render(){
@@ -13,7 +14,7 @@ class MYRouter extends Component {
             <Router>
                 <Switch>
                   <Route exact path='/' component={Home} />
-                  {/* <Route path='/:slug' component={Detail} /> */}
+                  <Route path='/post/user/:id' component={Post} />
                 </Switch>
             </Router>    
         )
