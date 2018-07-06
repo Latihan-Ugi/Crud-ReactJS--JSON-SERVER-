@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 class Header extends Component{
     constructor(props){
@@ -15,13 +15,13 @@ class Header extends Component{
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">User <span className="sr-only">(current)</span></Link>
+                                <a href="/" className="nav-link">User </a>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Album <span className="sr-only">(current)</span></Link>
+                                <a href="/album" className="nav-link">Album </a>
                             </li>
                             <li className="nav-item">
-                                <Link to="/" className="nav-link">Post <span className="sr-only">(current)</span></Link>
+                                <a href="/allpost" className="nav-link">Post </a>
                             </li>
                         </ul>
                     </div>

@@ -12,6 +12,11 @@ class ListUser extends Component {
 
     }
     
+
+    slug(value){
+        return value.toLowerCase().replace(/-+/g, '').replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    }
+
     render(){
         return(
             <div  className="container">
@@ -40,7 +45,7 @@ class ListUser extends Component {
                                     <td>{value.website}</td>
                                     <td>{value.address.street}</td>
                                     <td>
-                                        <Link to={"/post/user/"+value.id}>
+                                        <Link to={"/post/user/"+value.id+"/"+this.slug(value.name)}>
                                             Post
                                         </Link>
                                         &nbsp;|&nbsp;
