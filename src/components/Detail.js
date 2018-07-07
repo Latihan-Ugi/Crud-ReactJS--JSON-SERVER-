@@ -54,7 +54,7 @@ class Detail extends Component{
                     loaduser:false,
                     username:data.name
                 })
-                console.log(data)
+                // console.log(data)
             })
             .catch(error => console.log("Error: "+ error))
     }
