@@ -19,7 +19,7 @@ class ListUser extends Component {
 
     render(){
         return(
-            <div  className="container">
+            <div className="container">
                 <div  className="row">
                     <h3 style={{marginTop:15}}>List Of User</h3>
                     <table className="table table-bordered">
@@ -49,7 +49,7 @@ class ListUser extends Component {
                                             Post
                                         </Link>
                                         &nbsp;|&nbsp;
-                                        <Link to={"/album/user/"+value.id}>
+                                        <Link to={"/album/user/"+value.id+"/"+this.slug(value.name)}>
                                             Album
                                         </Link>
                                     </td>

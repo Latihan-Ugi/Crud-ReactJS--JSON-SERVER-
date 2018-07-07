@@ -10,6 +10,8 @@ import Post from './Post';
 import AddPost from './AddPost';
 import Detail from './Detail';
 import EditPost from './EditPost';
+import Album from './Album';
+import Photo from './Photo';
 
 class MYRouter extends Component {
     render(){
@@ -22,6 +24,9 @@ class MYRouter extends Component {
                   <Route path='/post/user/:id/:user' component={Post} />
                   <Route path='/detail/:id' component={Detail} />
                   <Route path='/edit/post/:id' component={EditPost} />
+                  <Route path='/allalbum' component={Album} />
+                  <Route path='/album/user/:id/:user' component={Album} />
+                  <Route path='/albums/:id/photos' component={Photo} />
                 </Switch>
             </Router>    
         )

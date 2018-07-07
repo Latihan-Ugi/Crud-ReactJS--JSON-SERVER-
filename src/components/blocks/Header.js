@@ -18,7 +18,7 @@ class Header extends Component{
                                 <a href="/" className="nav-link">User </a>
                             </li>
                             <li className="nav-item">
-                                <a href="/album" className="nav-link">Album </a>
+                                <a href="/allalbum" className="nav-link">Album </a>
                             </li>
                             <li className="nav-item">
                                 <a href="/allpost" className="nav-link">Post </a>

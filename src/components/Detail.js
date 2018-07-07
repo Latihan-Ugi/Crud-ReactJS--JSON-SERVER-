@@ -11,6 +11,8 @@ class Detail extends Component{
         this.state = {
             id:params.id,
             loading:false,
+            loaduser:false,
+            username:'',
             data:{}
         }
         this.service = new Service();
@@ -31,10 +33,28 @@ class Detail extends Component{
                     loading:false,
                     data:{
                         id:data.id,
+                        userId:data.userId,
                         title:data.title,
                         body:data.body
                     }
                 })
+                this.getDataUser();
+            })
+            .catch(error => console.log("Error: "+ error))
+    }
+
+    getDataUser(){
+        this.setState({
+            loaduser:true
+        })
+        fetch(this.service.pointing()+"users/"+this.state.data.userId)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    loaduser:false,
+                    username:data.name
+                })
+                console.log(data)
             })
             .catch(error => console.log("Error: "+ error))
     }
@@ -57,6 +77,23 @@ class Detail extends Component{
                                     <div className="card">
                                         <div className="card-body">
                                             <h3>{data.title}</h3>
+                                            <span>
+                                                <div className="row" style={{marginBottom:15}}>
+                                                    <div className="col-1" style={{paddingRight:0}}>
+                                                        <i className="far fa-user"></i>
+                                                    </div>
+                                                    <div className="col-10" style={{paddingLeft:0}}>
+                                                        {
+                                                            this.state.loaduser ?
+                                                                <span>Loading..</span>
+                                                            : 
+                                                                <div>
+                                                                    {this.state.username}
+                                                                </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </span>
                                             <p>{data.body}</p>
                                         </div>
                                         <Comments idpost={data.id}/>  
