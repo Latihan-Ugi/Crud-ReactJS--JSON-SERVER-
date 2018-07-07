@@ -29,7 +29,7 @@ class ListPhoto extends Component {
                                 </div>    
                             :
                                 this.props.dataphoto.map((value,i) =>
-                                    <div className="col-3" key={i} style={{marginTop:10}}>
+                                    <div className="col-md-3" key={i} style={{marginTop:10}}>
                                         <div className="card">
                                             <img className="card-img-top" src={value.thumbnailUrl} alt="Card image cap"/>
                                             <div className="card-body">
