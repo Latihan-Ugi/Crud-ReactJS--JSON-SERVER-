@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Bambang",
+      "email": "bambang@email.com",
+      "phone": "082392323",
+      "address": {
+        "city": "Bogor"
+      },
+      "website": "bambang.com"
+    },
+    {
+      "id": 2,
+      "name": "Joko",
+      "email": "Joko@email.com",
+      "phone": "08239212",
+      "address": {
+        "city": "Medan"
+      },
+      "website": "Joko.com"
+    },
+    {
+      "id": 3,
+      "name": "Andi",
+      "email": "andi@email.com",
+      "phone": "08211223",
+      "address": {
+        "city": "Bandung"
+      },
+      "website": "andi.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "title": "Jakarta macet",
+      "body": "Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus Jakarta Macet terus"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "title": "Bogor Kota Hujan",
+      "body": "Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin Bogor kalau hujan dingin "
+    },
+    {
+      "title": "select2 ajax and preselect",
+      "body": "ww",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "id": 6,
+      "title": "react JS",
+      "body": "React React React React React React React React React React React React React React React React React React React React",
+      "userId": 3
+    }
+  ],
+  "comments": [
+    {
+      "postId": 1,
+      "id": 1,
+      "name": "id labore ex et quam laborum",
+      "email": "Eliseo@gardner.biz",
+      "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+    },
+    {
+      "postId": 1,
+      "id": 2,
+      "name": "quo vero reiciendis velit similique earum",
+      "email": "Jayne_Kuhic@sydney.com",
+      "body": "est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et"
+    },
+    {
+      "postId": 2,
+      "id": 3,
+      "name": "odio adipisci rerum aut animi",
+      "email": "Nikita@garfield.biz",
+      "body": "quia molestiae reprehenderit quasi aspernatur\naut expedita occaecati aliquam eveniet laudantium\nomnis quibusdam delectus saepe quia accusamus maiores nam est\ncum et ducimus et vero voluptates excepturi deleniti ratione"
+    }
+  ]
+}

@@ -43,7 +43,7 @@ class ListUser extends Component {
                                     <td>{value.email}</td>
                                     <td>{value.phone}</td>
                                     <td>{value.website}</td>
-                                    <td>{value.address.street}</td>
+                                    <td>{value.address.city}</td>
                                     <td>
                                         <Link to={"/post/user/"+value.id+"/"+this.slug(value.name)}>
                                             Post

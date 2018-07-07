@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Header from './blocks/Header'
+
 import Service from './../services/Service'
 
 import ListPost from './particles/ListPost'
@@ -16,7 +17,11 @@ class Post extends Component {
             update:true,
             data:[]
         }
-        this.service = new Service();
+    }
+
+    service(){
+        var enpoint = new Service();
+        return enpoint.pointing();
     }
 
     componentDidMount(){
@@ -29,12 +34,12 @@ class Post extends Component {
         })
         var endpoint = "";
         if(this.state.id === undefined){
-            endpoint = "posts";
+            endpoint = "posts?_sort=id&_order=desc";
         } else {
-            endpoint = 'posts?userId='+this.state.id;
+            endpoint = 'posts?userId='+this.state.id+"&_sort=id&_order=desc";
         }
 
-        fetch(this.service.pointing()+endpoint)
+        fetch(this.service()+endpoint)
             .then(response => response.json())
             .then(data => {
                 // console.log(data)
@@ -42,6 +47,18 @@ class Post extends Component {
                     loading:false,
                     data:data
                 })
+            })
+            .catch(error => console.log("Error: "+error))
+    }
+
+    delete = (id) => {
+       fetch(this.service()+'posts/'+id, {
+            method: 'DELETE'
+            })
+            .then(response => {
+                if(response.status === 200){
+                    this.getData();
+                }
             })
             .catch(error => console.log("Error: "+error))
     }
@@ -56,7 +73,7 @@ class Post extends Component {
                             <span>Loading..</span>
                         </div>    
                     :
-                        <ListPost datapost={this.state.data} username={this.state.name}/>
+                        <ListPost datapost={this.state.data} username={this.state.name} delete={this.delete}/>
                 }
             </div>
         )

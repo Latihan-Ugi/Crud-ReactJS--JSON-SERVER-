@@ -1,0 +1,14 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "Fake REST API",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server -p 4000 db.json"
+  },
+  "dependencies": {
+    "json-server": "0.11.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
